@@ -1,0 +1,16 @@
+﻿<div ng-cloak>
+   <div class="report-date">{{dataShare.get().date_str}}</div>
+   <div>
+      <div class="centered locked" ng-show="dataShare.get().lock"><img src="assets/report_locked.png" /></div>
+      <div class="centered notLocked" ng-show="!dataShare.get().lock">
+         <div class="report-btn" ng-click="report(2)" ng-style="myStyle[2]"><img src="assets/report/t2.png" /></div><div class="report-btn" ng-click="report(1)" ng-style="myStyle[1]"><img src="assets/report/t1.png" /></div><div class="report-btn" ng-click="report(0)" ng-style="myStyle[0]"><img src="assets/report/t0.png" /></div><br />
+         <div class="report-btn" ng-click="report(5)" ng-style="myStyle[5]"><img src="assets/report/t5.png" /></div><div class="report-btn" ng-click="report(4)" ng-style="myStyle[4]"><img src="assets/report/t4.png" /></div><div class="report-btn" ng-click="report(3)" ng-style="myStyle[3]"><img src="assets/report/t3.png" /></div><br />
+         <div class="report-btn" ng-click="report(8)" ng-style="myStyle[8]"><img src="assets/report/t8.png" /></div><div class="report-btn" ng-click="report(7)" ng-style="myStyle[7]"><img src="assets/report/t7.png" /></div><div class="report-btn" ng-click="report(6)" ng-style="myStyle[6]"><img src="assets/report/t6.png" /></div><br />
+         <div class="report-btn" ng-click="reportOthers(false)" ng-style="myStyle[11]"><img src="assets/report/t11.png" /></div><div class="report-btn" ng-click="report(10)" ng-style="myStyle[10]"><img src="assets/report/t10.png" /></div><div class="report-btn" ng-click="report(9)" ng-style="myStyle[9]"><img src="assets/report/t9.png" /></div><br />
+      </div>
+   </div>
+</div>
+<div ng-include="'pages/reportOthers.html'"></div>
+<div ng-include="'pages/reportInfo.html'"></div>
+<div ng-include="'pages/footer1.html'"></div>
+<div ng-include="'pages/loader.html'"></div>

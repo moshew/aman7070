@@ -1,0 +1,19 @@
+﻿<div ng-cloak class="centered login">
+    <div class="login-header">
+        <div>{{message}}</div>
+        <span ng-show="loginState=='code'"><div ng-class="{'login-circle':fills[0].value, 'login-circle border':!fills[0].value}"></div><div ng-class="{'login-circle':fills[1].value, 'login-circle border':!fills[1].value}"></div><div ng-class="{'login-circle':fills[2].value, 'login-circle border':!fills[2].value}"></div><div ng-class="{'login-circle':fills[3].value, 'login-circle border':!fills[3].value}"></div><div ng-class="{'login-circle':fills[4].value, 'login-circle border':!fills[4].value}"></div></span>
+        <div ng-show="loginState=='phone'" class="login-phone">{{value}}</div>
+    </div>
+    <div class="login-btn" ng-click="press(1)"><img ng-src="assets/login/btn1.png" /></div><div class="login-btn" ng-click="press(2)"><img ng-src="assets/login/btn2.png" /></div><div class="login-btn" ng-click="press(3)"><img ng-src="assets/login/btn3.png" /></div><br />
+    <div class="login-btn" ng-click="press(4)"><img ng-src="assets/login/btn4.png" /></div><div class="login-btn" ng-click="press(5)"><img ng-src="assets/login/btn5.png" /></div><div class="login-btn" ng-click="press(6)"><img ng-src="assets/login/btn6.png" /></div><br />
+    <div class="login-btn" ng-click="press(7)"><img ng-src="assets/login/btn7.png" /></div><div class="login-btn" ng-click="press(8)"><img ng-src="assets/login/btn8.png" /></div><div class="login-btn" ng-click="press(9)"><img ng-src="assets/login/btn9.png" /></div><br />
+    <div class="login-btn" ng-click="sendCode()"><img ng-src="assets/login/btn11-{{loginState}}.png" /></div><div class="login-btn" ng-click="press(0)"><img ng-src="assets/login/btn10.png" /></div><div class="login-btn" ng-click="press('r')"><img src="assets/login/btn12.png" /></div><br />
+    <div class="popupScreen" ng-show="sendCodeScreen">
+        <div class="centered loginResult">
+            <img src="assets/login_found.png" /><br>
+            <md-button class="md-raised md-warn login-back" ng-click="sendCode();sendCodeScreen=false">חזור</md-button>
+        </div>
+    </div>
+
+</div>
+<div ng-include="'pages/loader.html'"></div>

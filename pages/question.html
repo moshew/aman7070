@@ -1,0 +1,33 @@
+﻿<div dir="rtl" ng-cloak>
+   <div class="question_header">
+      <div class="question_bg1"><img width="100%" src="assets/question_header.png" /></div>
+      <div class="timer11_c"><img width="100%" src="assets/timer.png" /></div>
+      <div class="timer11_run" ng-show="show_timer">
+         <div class="timer11_c"><img width="100%" src="assets/timerb.png" /></div>
+         <div class="timer11_l"><img width="100%" src="assets/timer-loader.gif" /></div>
+         <div class="timer11_t">{{score}}</div>
+      </div>
+   </div>
+
+   <div class="question_score">צברת עד כה {{dataShare.get().score}} נקודות<br/>מיקומך כרגע במשחק: מקום {{dataShare.get().place}}</div>
+   <div class="question_num">שאלה מספר {{dataShare.get().qnum}}</div>
+   <div class="question_frame" ng_show="question_show">
+      <img class="question_bg" src="assets/question_text.png" />
+      <div class="question_text_c"><div class="question_text">{{dataShare.get().q}}</div></div>
+   </div>
+   <div ng-class="{'question_ans': true, 'opac': (answer_op>0 && answer_op!=1)}" ng-click='answer(1)' ng-show="a1_show">
+      <img class="question_img" ng-src="assets/question_no1{{ans_color[0]}}.png" />
+      <div class="question_text_a" style="top:362px"><div class="question_option_txt">{{dataShare.get().a1}}</div></div>
+   </div>
+   <div ng-class="{'question_ans': true, 'opac': (answer_op>0 && answer_op!=2)}" ng-click='answer(2)' ng-show="a2_show">
+      <img class="question_img" ng-src="assets/question_no2{{ans_color[1]}}.png" />
+      <div class="question_text_a" style="top:458px"><div class="question_option_txt">{{dataShare.get().a2}}</div></div>
+   </div>
+   <div ng-class="{'question_ans': true, 'opac': (answer_op>0 && answer_op!=3)}" ng-click='answer(3)' ng-show="a3_show">
+      <img class="question_img" ng-src="assets/question_no3{{ans_color[2]}}.png" />
+      <div class="question_text_a" style="top:554px"><div class="question_option_txt">{{dataShare.get().a3}}</div></div>
+   </div>
+
+</div>
+<div ng-include="'pages/loader.html'"></div>
+<!--<img class="question" src="assets/question.png" />-->
