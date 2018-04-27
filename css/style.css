@@ -1,4 +1,9 @@
-﻿div:focus, div:active, span:focus, span:active, img:focus, img:active {
+﻿body {
+    margin: 0;
+    font-family: 'Arimo', Open-sans, sans-serif, Tahoma, Arial;
+}
+
+div:focus, div:active, span:focus, span:active, img:focus, img:active {
     outline: none;
     -webkit-tap-highlight-color:  rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
@@ -65,8 +70,10 @@ div{
     text-align:center;
     outline: none;
     color: white;
-    background:#234a7d;
-
+    background:#E4E4E4;
+    background-image: url('/assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .centered {
@@ -82,8 +89,7 @@ div{
     height: 100%;
     top:0;
     position: absolute;
-    background: #234a7d;
-    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.6);
     z-index:0;
 }
 
@@ -171,7 +177,7 @@ div{
 
 .home-footer {
     width:100%;
-    height:250px;
+    height:300px;
     position:absolute;
     bottom:0;
 }
@@ -182,11 +188,13 @@ div{
     height: 60px;
     border-style: solid;
     border-radius: 15px;
-    border-width: 2px;
+    border-width: 3px;
     margin: 12px auto;
     -webkit-transition:all linear 0.3s;
     transition:all linear 0.3s;
-
+    background: rgba(0,0,0,.6);
+    background: -webkit-linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7));
+    border-color: #393;
 }
 
 .home_op.ng-hide {
@@ -300,7 +308,8 @@ div{
     border-width: 1px;
     border-style: solid;
     border-color: white;
-    background: #ef3a28;
+    background: #393;
+    background: linear-gradient(#393, #1E6E1E);
     display: inline-block;
 }
 
@@ -322,7 +331,7 @@ div{
 
 .question_frame {
     -webkit-transition:all linear 0.3s;
-    transition:all linear 0.3s;
+    transition:all linear 0.3s;    
 }
 
 .question_frame.ng-hide {
@@ -386,18 +395,19 @@ div{
 
 .question_score {
     position: absolute;
-    top: 20px;
+    top: 28px;
     right: 20px;
     text-align: right;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .question_num {
     margin-top: -17px;
     margin-right: 12%;
     text-align: right;
-    font-size: 18px;
+    font-size: 20px;
+    color: black;
 }
 
 .question_bg {
@@ -414,14 +424,15 @@ div{
     height: 135px;
     top:-170px;
     right:12%;
+    color: white;
 }
 
 .question_text {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    color: black;
-    font-size: 26px;
+    color: white;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -430,8 +441,7 @@ div{
     top: 50%;
     transform: translateY(-50%);
     color: white;
-    font-size: 26px;
-    font-family: David;
+    font-size: 20px;
 }
 
 .question_ans {
@@ -443,9 +453,23 @@ div{
     transition:all linear 0.3s;
     -webkit-transition-delay: 0.05s;
     transition-delay: 0.05s;
-
 }
 
+.icon_symbol {
+    height: 60%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.icon {
+    margin-top: 20%;
+    height: 50px;
+    width: 50px;
+    background: rgba(0,0,0,.6);
+    background: -webkit-linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7));
+    border: 3px solid #393;
+}
 
 .question_ans.ng-hide {
     left: -400px;
@@ -475,7 +499,9 @@ div{
     position: absolute;
     top: 0px;
     bottom: 0px;
-    background: #7a8faa;
+    background-color: rgba(0,0,0,.6);
+    border-top: 5px solid #393;
+    border-bottom: 5px solid #393;    
     border-radius: 15px;
     margin: 4%;
     padding: 15px;
@@ -500,11 +526,13 @@ div{
     margin-left: -75px;
     width: 150px;
     height: 40px;
+    line-height: 40px;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
     border-color: white;
-    background: #ef3a28;
+    background: #393;
+    background: linear-gradient(#393, #1E6E1E);
     text-align: center;
     padding: 5px;
 }

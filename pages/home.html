@@ -8,9 +8,9 @@
       </div>
    </div>
    <div class="home-footer" dir="rtl">
-      <div class="home_op" ng_show="home_op1" style="background: #ff1610" ng-click="enter()"><div class="question_option_txt">התחילו לשחק!</div></div>
-      <div class="home_op" ng_show="home_op2" style="background: forestgreen"><div class="question_option_txt">הוראות המשחק</div></div>
-      <div class="home_op" ng_show="home_op3" style="background: black"><div class="question_option_txt">עשרת הגדולים</div></div>
+      <div class="home_op" ng_show="home_op1" ng-click="enter()"><div class="question_option_txt">התחילו לשחק!</div></div>
+      <div class="icon" style="float: left; margin-left: 10%;" ng_show="home_op2"><img src="assets/question-mark.svg" class="icon_symbol" /></div>
+      <div class="icon" style="float: right; margin-right: 10%;" ng_show="home_op3"><img src="assets/cup.svg" class="icon_symbol" /></div>
    </div>
 </div>
 <div ng-include="'pages/loader.html'"></div>
