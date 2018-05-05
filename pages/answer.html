@@ -1,8 +1,10 @@
 ﻿<div ng-cloak dir="rtl">
    <div class="answer_bg" ng-show="answer_show">
       <div class="answer_txt">
-         {{dataShare.get().desc}}
-         <div class="answer_image"><img width="100%" src="assets/images/a2.jpg" /></div>
+		<div class="answer_title">{{dataShare.get().title}}</div>
+		<image class="answer_simage" ng-if="dataShare.get().iop==2" width="130px" ng-src="assets/images/{{dataShare.get().image}}" />
+        {{dataShare.get().desc}}
+        <div class="answer_image" ng-if="dataShare.get().iop==1"><img width="100%" ng-src="assets/images/{{dataShare.get().image}}" /></div>
       </div>
 
       <div class="next_btn" ng-click="next_question()">לשאלה הבאה</div>

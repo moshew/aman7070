@@ -354,34 +354,34 @@ div{
 .timer11_c {
     position: relative;
     text-align: left;
-    top: -150px;
-    left: 0px;
+    top: -175px;
+    left: 5px;
 }
 
 .timer11_cb {
     position: relative;
     text-align: left;
-    top: -272px;
-    left: 0px;
+    top: -280px;
+    left: 5px;
 }
 
 .timer11_l {
     position: relative;
     text-align: left;
-    top: -396px;
-    left: 0px;
+    top: -382px;
+    left: 9px;
 
 }
 
 .timer11_t {
     position: relative;
-    top: -480px;
-    left: 3px;
-    width: 120px;
+    top: -450px;
+    left: 5px;
+    width: 100px;
     text-align: center;
     color: white;
-    font-size: 35px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .timer11 {
@@ -583,7 +583,18 @@ div{
 .answer_txt {
     height: 490px;
     padding: 0px 10px;
+	font-size: 17px;
 }
+
+.answer_title {
+	text-align: right;
+	font-size: 25px;
+	font-weight: 700;
+	text-decoration: underline;
+	margin-bottom: 8px;
+	
+}
+
 .next_btn {
     margin: auto;
     width: 150px;
@@ -608,8 +619,16 @@ div{
 .answer_image {
     width: 100%;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 15px;
 }
+
+.answer_simage {
+    float: right;
+	margin-top: 5px;
+	margin-bottom: 2px;
+	margin-left: 10px;
+}
+
 .formMSg-circle {
     background: #ef3a28;
     border-radius: 50%;
