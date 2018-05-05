@@ -37,11 +37,6 @@ app.config(function ($routeProvider) {
             controller: 'questionController'
         })
 
-        .when('/question1', {
-            templateUrl: 'pages/question_1.html',
-            controller: 'questionController'
-        })
-
         .when('/answer', {
             templateUrl: 'pages/answer.html',
             controller: 'infoController'
