@@ -1,13 +1,15 @@
 ﻿<div ng-cloak>
    <div class="question_header">
       <div><img width="100%" height="175px" src="assets/question_header.png" /></div>
-      <div class="timer11_c"><img src="assets/timer.png" /></div>
+      <!--<div class="timer11_c"><img width="90px" src="assets/timer.png" /></div>-->
       <div ng-show="show_timer">
-         <div class="timer11_cb"><img src="assets/timerb.png" /></div>
-         <div class="timer11_l"><img width="94px" src="assets/timer-loader.gif" /></div>
+         <!--<div class="timer11_cb"><img width="90px" src="assets/timerb.png" /></div>-->
+         <div class="timer11_l"><img width="112px" src="assets/loader4.gif" /></div>
          <div class="timer11_t">{{score}}</div>
       </div>
-      <div class="question_score">צברת עד כה {{dataShare.get().score}} נקודות<br/>מיקומך כרגע במשחק: מקום {{dataShare.get().place}}</div>
+      <div class="question_score">צברת עד כה {{dataShare.get().score}} נקודות
+      <div class="question_score2">דירוג: מקום {{dataShare.get().place}}</div>
+      </div>
    </div>
 
    <div dir="rtl">
@@ -18,7 +20,7 @@
             <div class="question_text_c"><div class="question_text">{{dataShare.get().q}}</div></div>
          </div>
          <div ng-if="dataShare.get().image!=''" class="question_bg">
-            <div class="question_img1"><img height="117px" ng-src="assets/images/{{dataShare.get().image}}" /></div>
+            <div class="question_img1"><img class="q_pic" height="117px" ng-src="assets/images/{{dataShare.get().image}}" /></div>
             <div class="question_img2">
                <img class="question_text_ii" src="assets/question_text1.png" />
                <div class="question_text1">{{dataShare.get().q}}</div>
