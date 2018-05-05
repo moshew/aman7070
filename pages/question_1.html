@@ -13,12 +13,8 @@
    <div dir="rtl">
       <div class="question_num">שאלה מספר {{dataShare.get().qnum}}</div>
       <div class="question_frame" ng_show="question_show">
-         <div ng-if="dataShare.get().image==''" class="question_bg">
-            <img class="question_text_i" src="assets/question_text.png" />
-            <div class="question_text_c"><div class="question_text">{{dataShare.get().q}}</div></div>
-         </div>
-         <div ng-if="dataShare.get().image!=''" class="question_bg">
-            <div class="question_img1"><img ng-src="assets/images/{{dataShare.get().image}}" /></div>
+         <div class="question_bg">
+            <div class="question_img1"><img src="assets/images/q1.jpg" /></div>
             <div class="question_img2">
                <img class="question_text_ii" src="assets/question_text1.png" />
                <div class="question_text1">{{dataShare.get().q}}</div></div>
@@ -39,6 +35,5 @@
       </div>
    </div>
 </div>
-
 <div ng-include="'pages/loader.html'"></div>
 <!--<img class="question" src="assets/question.png" />-->

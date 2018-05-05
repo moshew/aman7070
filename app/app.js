@@ -22,6 +22,11 @@ app.config(function ($routeProvider) {
             controller: 'mainController'
         })
 
+        .when('/rules', {
+            templateUrl: 'pages/rules.html',
+            controller: 'mainController'
+        })
+
         .when('/login', {
             templateUrl: 'pages/login.html',
             controller: 'loginController'
@@ -29,6 +34,11 @@ app.config(function ($routeProvider) {
 
         .when('/question', {
             templateUrl: 'pages/question.html',
+            controller: 'questionController'
+        })
+
+        .when('/question1', {
+            templateUrl: 'pages/question_1.html',
             controller: 'questionController'
         })
 
@@ -134,9 +144,10 @@ app.factory('dataShare', function ($http, $location, $timeout) {
     return service;
 });
 
-app.controller('mainController', function ($scope, $rootScope, $http, $timeout, $interval, dataShare) {
+app.controller('mainController', function ($scope, $location, $http, $timeout, $interval, dataShare) {
     $scope.dataShare = dataShare;
     $scope.zoomFactor = dataShare.getZoomFactor();
+    $scope.dim = dataShare.dim;
 
     var timer_cnt = 0;
     timer_start1 = $interval(function () {
@@ -150,7 +161,11 @@ app.controller('mainController', function ($scope, $rootScope, $http, $timeout, 
     },150);
 
 
-    $scope.enter = function (admin) {
+    $scope.rules = function () {
+        $location.path('rules');
+    };
+
+    $scope.game = function () {
         dataShare.setLoading(true);
         $http.jsonp(domain + 'question.php?callback=JSON_CALLBACK&id=' + dataShare.get().id)
             .success(function (data) {

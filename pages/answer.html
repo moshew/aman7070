@@ -1,5 +1,10 @@
 ﻿<div ng-cloak dir="rtl">
-   <div class="answer_text" ng-show="answer_show">{{dataShare.get().desc}}
+   <div class="answer_bg" ng-show="answer_show">
+      <div class="answer_txt">
+         {{dataShare.get().desc}}
+         <div class="answer_image"><img width="100%" src="assets/images/a2.jpg" /></div>
+      </div>
+
       <div class="next_btn" ng-click="next_question()">לשאלה הבאה</div>
    </div>
 </div>
